@@ -13,10 +13,11 @@ from oscal_pydantic import (
     ssp,
 )
 
+cg_uuid=uuid.uuid5(uuid.NAMESPACE_DNS, 'cloud.gov')
 
 ssp_au_01 = ssp.SpecificControlStatement(
     statement_id="au_01_smt",
-    uuid=str(uuid.uuid4()),
+    uuid = str(uuid.uuid5(cg_uuid, 'ssp_au_01')),
     remarks = "This is a remark"
 )
 
